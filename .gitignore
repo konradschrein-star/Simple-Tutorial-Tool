@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+.next/
+*.tsbuildinfo
+
+# Environment & secrets — NEVER commit these
+.env
+.env.*
+!.env.example
+
+# Media / generated files
+media/
+uploads/
+*.mp4
+*.mkv
+*.mp3
+*.wav
+
+# Logs / OS
+*.log
+.DS_Store
+Thumbs.db

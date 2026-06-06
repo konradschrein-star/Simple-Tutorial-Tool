@@ -1,0 +1,23 @@
+{
+  "name": "simple-tutorial-tool",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.0.0", "pnpm": ">=9.0.0" },
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "build:packages": "pnpm -r --filter \"./packages/**\" build",
+    "build": "pnpm build:packages && pnpm --filter web build && pnpm --filter worker build",
+    "dev:web": "pnpm --filter web dev",
+    "dev:worker": "pnpm --filter worker dev",
+    "start:web": "pnpm --filter web start",
+    "start:worker": "pnpm --filter worker start",
+    "db:push": "pnpm --filter @repo/db db:push",
+    "db:studio": "pnpm --filter @repo/db db:studio",
+    "setup:admin": "pnpm --filter web exec tsx scripts/create-admin.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "rimraf": "^6.0.1"
+  }
+}

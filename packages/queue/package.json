@@ -1,0 +1,12 @@
+{
+  "name": "@repo/queue",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
+  "scripts": { "build": "tsc --build", "dev": "tsc --build --watch", "clean": "rimraf dist" },
+  "dependencies": { "@repo/contracts": "workspace:*", "bullmq": "^5.35.4", "ioredis": "^5.4.2" },
+  "devDependencies": { "typescript": "^5.7.2" }
+}
